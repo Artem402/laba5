@@ -46,8 +46,8 @@ namespace laba5
                 var r = Console.ReadLine();
                 if (r == "1")
                 {
-                    try 
-                    { 
+                    try
+                    {
                         Console.WriteLine("Выберите действие +, - , *, / ");
                         var a = Console.ReadLine();
                         Console.WriteLine("Введите первое число: ");
@@ -57,10 +57,10 @@ namespace laba5
                         if (a == "+") Console.WriteLine($"Ответ: {ord.Add(x, y)}");
                         else if (a == "-") Console.WriteLine($"Ответ: {ord.Sub(x, y)}");
                         else if (a == "*") Console.WriteLine($"Ответ: {ord.Mul(x, y)}");
-                        else if (a == "/") 
+                        else if (a == "/")
                         {
                             if (y == 0) throw new Exception();
-                            Console.WriteLine($"Ответ: {ord.Div(x, y)}"); 
+                            Console.WriteLine($"Ответ: {ord.Div(x, y)}");
                         }
                         else Console.WriteLine("Действие выбрано неверно");
                     }
@@ -68,7 +68,7 @@ namespace laba5
                 }
                 else if (r == "2")
                 {
-                    Console.WriteLine("Выберите действие +, - , *, /, sqrt ");
+                    Console.WriteLine("Выберите действие +, -, *, /, sqrt ");
                     var a = Console.ReadLine();
                     try
                     {
@@ -84,7 +84,7 @@ namespace laba5
                             Console.WriteLine("Введите второе число: ");
                             y = Convert.ToDouble(Console.ReadLine());
                         }
-                        if (a == "+") ord.Add(x, y);
+                        if (a == "+") Console.WriteLine($"Ответ: {adv.Add(x, y)}");
                         else if (a == "-") Console.WriteLine($"Ответ: {adv.Sub(x, y)}");
                         else if (a == "*") Console.WriteLine($"Ответ: {adv.Mul(x, y)}");
                         else if (a == "/")
@@ -97,6 +97,7 @@ namespace laba5
                     }
                     catch { Console.WriteLine("Числа введены неверно"); }
                 }
+                else break;
             }
         }
     }
